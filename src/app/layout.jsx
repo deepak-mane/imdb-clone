@@ -1,8 +1,8 @@
 import Header from '@/components/Header'
 import './globals.css'
-import { Inter, Roboto } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+import { Roboto } from '@next/font/google'
+import Providers from './Providers'
 
 export const metadata = {
     title: 'IMDB - CLONE',
@@ -12,13 +12,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang='en'>
-            <body className={inter.className}>
-                {/* header */}
-                <Header />
-                {/* Navbar */}
+            <body>
+                <Providers>
+                    {/* header */}
+                    <Header />
+                    {/* Navbar */}
 
-                {/* search box */}
-                {children}
+                    {/* search box */}
+                    {children}
+                </Providers>
             </body>
         </html>
     )

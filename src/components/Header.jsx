@@ -13,6 +13,7 @@ import { FiUsers } from 'react-icons/fi'
 import { CgPlayListAdd } from 'react-icons/cg'
 import { GoSignIn } from 'react-icons/go'
 import Link from 'next/link'
+import DarkModeSwitch from './DarkModeSwitch'
 
 // header color #121212
 // body #000
@@ -50,7 +51,8 @@ export default function Header() {
                     Icon={GiWireframeGlobe}
                 /> */}
             </div>
-            <div className=''>
+            <div className='flex items-center space-x-5'>
+                <DarkModeSwitch />
                 <Link href='/'>
                     <h2 className='text-2xl'>
                         <span className='font-bold bg-amber-500 py-1 px-2 rounded-lg mr-1'>
