@@ -1,17 +1,65 @@
- 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
  
+:root {
+    --max-width-container: 1355px;
+    --min-height-container: 100vh;
+
+    --fontsize-header : 14px;
+    --fontsize-navbar : 14px;
+    --fontsize-footer : 14px;
+
+    --border-radius-sm: 3px;
+    --border-radius-md: 4px;
+    --border-radius-base: 5px;
+    --border-radius-lg: 8px;
+    --border-radius-xl: 12px;
+    /* --logo-light : url();
+    --logo-dark : url();     */
+    --color-bg: #fafafa28;
+    --color-fg: #504c4c;
+    --color-bg-container: rebeccapurple;
+
+    /* button colors */
+    --color-btn-hero: #53c28b;
+    --color-btn-logout: #53c28b;
+    /* Image Text Containers  colors */
+    --color-imgtext-container: #53c28b;
+    /* Text Over Image colors */
+    --color-text-over-img: #53c28b;
+    /* Text Title - Category*/
+    --color-title-category: #53c28b;
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
- 
-
+html,
 body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
     font-family: 'Roboto',sans-serif;
-    background-color: #FAFAFA;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    max-width: var(--max-width-container);
+    min-height: var(--min-height-container);
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
 }
